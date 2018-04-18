@@ -7,30 +7,31 @@ body {
     padding: 0;
     color: #777;
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5 {
     color: #005a9c;
     font-family: 'Georgia', Times, Times New Roman, serif;
   }
-  h1{
+  h1 {
     font-size: 2.6em;
     line-height: 2.45em;
   }
-  h2{
+  h2 {
     font-size: 2.1em;
     line-height: 1.9em;
     color: #4aaaa5;
     border-bottom: 2px solid #dcdcdc;
     margin-bottom: 2%;
   }
-  h3{
-    font-size: 1.8em;
+  h3 {
+    font-size: 1em;
     line-height: 1.65em;
+    color: #777;
   }
-  h4{
+  h4 {
     font-size: 1.65em;
     line-height: 1.4em;
   }
-  h5{
+  h5 {
     font-size: 1.4em;
     line-height: 1.25em;
   }
@@ -56,15 +57,16 @@ header .headerInfo {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    
 }
 a {
     text-decoration: none;
     color: #4aaaa5;
-
 }
 a:hover {
     color: black;
+}
+.myPic {
+    margin-right: 2%; width: 100%; max-width: 250px; float: left;
 }
 header .headerInfo h1 {
     display: inline-block;
@@ -85,7 +87,6 @@ header #navigation a {
     padding: 0 20px;
     font-size: 17px;
     border-right: 1px solid grey;
-
 }
 header #navigation a.activeLink {
     color: #4aaaa5;
@@ -180,4 +181,72 @@ ul:contactInfo li:nth-child(3) {
 }
 .boxes:hover > div {
     bottom: 15%;
+}
+/********************* FORM ****/
+.form {
+    padding: 3%;
+    border: 1px solid #eee;
+   
+
+}
+.form .formBox input, .form .formBox textarea {
+    width: 98%;
+    color: #777;
+    background: white;
+    border: 1px solid #333;
+    padding-left: 2%;
+}
+.form .formBox textarea {
+    padding-top: 2%;
+}
+/* MEDIA INQUIRES */
+
+@media all and (max-width: 704px) and (min-width: 0px) {
+    header .headerInfo h1 {
+       display: block;
+        margin: 0;
+        background: #4aaaa5;
+        color: #fff;
+        padding: 0 3%;
+        text-align: center;
+    }
+    .boxes {
+        width: 44%;
+        max-width: 320px;
+        margin: 0 2.5%;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        border: 1px solid #777;
+        float: left;
+        margin-bottom: 3%;
+    }
+}
+@media all and (max-width: 417px) and (min-width: 0px) {
+    header .headerInfo h1 {
+       line-height: normal;
+    }
+    .aboutMeInfo .myPic {
+        float: initial !important;
+        max-width: none;
+        
+    }
+    ul.contactInfo {
+        float: none;
+        width:auto;
+    }
+    header #navigation {
+       float: none;
+        padding: 4.5% 0;
+        text-align: center;
+    }
+    header #navigation a {
+        text-decoration: none;
+        color: #777;
+        float: none;
+        text-align: center;
+        padding: 0 20px;
+        font-size: 17px;
+        border-right: 1px solid grey;
+    }
 }
